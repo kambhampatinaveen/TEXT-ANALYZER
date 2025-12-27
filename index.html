@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="main-wrapper">
+    <div class="container">
+
+        <h1>🔤 Letter Frequency Analyzer</h1>
+        <p class="subtitle">Enter text to find letter count and frequency</p>
+
+        <!-- Form -->
+        <form method="POST" class="form-box">
+            <textarea name="text" placeholder="Enter your text here..." required></textarea>
+            <button type="submit">Analyze Text</button>
+        </form>
+
+        {% if result and result.text %}
+        <div class="result-box">
+
+            <h2>📊 Analysis Result</h2>
+
+            <div class="summary">
+                <p><strong>Original Text:</strong> {{ result.text }}</p>
+                <p><strong>Letter Count (Alphabets Only):</strong> {{ result.length }}</p>
+                <p><strong>Word Count:</strong> {{ result.words }}</p>
+            </div>
+
+            <h3>📘 Letter Frequency</h3>
+
+            <table class="freq-table">
+                <tr>
+                    <th>Letter</th>
+                    <th>Count</th>
+                </tr>
+                {% for letter, count in result.frequency.items() %}
+                <tr>
+                    <td>{{ letter }}</td>
+                    <td>{{ count }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+
+        </div>
+        {% endif %}
+
+    </div>
+</div>
+
+<footer>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background */
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Center layout */
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+/* Main container */
+.container {
+    width: 75%;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    color: #5a4fcf;
+    font-weight: 600;
+}
+
+.subtitle {
+    text-align: center;
+    margin: 12px 0 30px;
+    color: #666;
+}
+
+/* Form */
+.form-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-box textarea {
+    width: 90%;
+    height: 220px;
+    padding: 18px;
+    border-radius: 12px;
+    border: 2px solid #ccc;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-box textarea:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 10px rgba(102,126,234,0.6);
+}
+
+/* Button */
+.form-box button {
+    margin-top: 20px;
+    padding: 14px 40px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.form-box button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Result Section */
+.result-box {
+    margin-top: 40px;
+}
+
+.result-box h2 {
+    color: #5a4fcf;
+    margin-bottom: 15px;
+}
+
+/* Summary */
+.summary p {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+/* Frequency Table */
+.freq-table {
+    width: 60%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.freq-table th {
+    background-color: #667eea;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.freq-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    font-size: 15px;
+}
+
+.freq-table tr:hover {
+    background-color: #f2f4ff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-size: 14px;
+}
